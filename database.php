@@ -4,6 +4,6 @@
 		# code...
 		echo "Failed to connect";
 	}else {
-		echo "Connected succesfully";
+		echo "<h1>Connected succesfully</h1>";
 	}
 ?>

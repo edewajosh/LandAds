@@ -74,14 +74,14 @@ span.psw {
         <h2>Login</h2>
     </div>
 
-<form action="/action_page.php">
+<form action="sign.php" method="post">
 
   <div class="container">
-    <label><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
 
     <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="password" required>
         
     <button type="submit" name="submit">Login</button>
     <input type="checkbox" checked="checked"> Remember me

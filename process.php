@@ -1,7 +1,7 @@
 <?php include 'database.php';?>
 <?php
 
-//encrypting password
+// Hashing password
 define("MAX_LENGTH", 6);
 
 function generateHash($password)
@@ -30,7 +30,7 @@ $query ="INSERT INTO user(firstName, surname, lastName,idNumber,phoneNumber,emai
 //echo "Hello World!";
 
 if (mysqli_query($connect, $query)) {
-	echo "Registered successfully...";
+	echo "Registered successfully, you can now login";
 	# code...
 	 header("Location: http://localhost/property/login.php");
 } else {

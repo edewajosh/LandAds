@@ -41,7 +41,7 @@
 	<div id="content">
 	<?php
 		$db = mysqli_connect('localhost','root','','robisearch');
-		$sql = "SELECT * FROM images";
+		$sql = "SELECT * FROM images ORDER BY id DESC";
 		$result = mysqli_query($db,$sql);
 		while ($row = mysqli_fetch_array($result)) {
 			echo "<div id = 'img_div' style ='float:left'>";
