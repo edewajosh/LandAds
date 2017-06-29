@@ -1,6 +1,7 @@
 <?php include 'database.php';?>
 <?php
 
+/*
 // Hashing password
 define("MAX_LENGTH", 6);
 
@@ -11,6 +12,7 @@ function generateHash($password)
 	$salt = substr($intermediate,0,MAX_LENGTH);
 	return hash("sha256",$password.$salt);
 }
+*/
 
 //create variables
 $first_name = mysqli_real_escape_string($connect, $_REQUEST['firstName']);
@@ -21,7 +23,7 @@ $phone_number = mysqli_real_escape_string($connect, $_REQUEST['phoneNumber']);
 $email = mysqli_real_escape_string($connect, $_REQUEST['email']);
 $password = mysqli_real_escape_string($connect, $_REQUEST['pass_word']);
 
-$hash = generateHash($password);
+$hash = password_hash($password, PASSWORD_DEFAULT, ['cost' => 12]);
 
 //Execute the query
 $query ="INSERT INTO user(firstName, surname, lastName,idNumber,phoneNumber,email, pass_word)
