@@ -5,7 +5,7 @@ form {
     border: 3px solid #f1f1f1;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password],input[type=email] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -78,7 +78,7 @@ span.psw {
 
   <div class="container">
     <label><b>Email</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
+    <input type="text" placeholder="Enter Email..." name="email" required>
 
     <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>

@@ -23,7 +23,8 @@ $phone_number = mysqli_real_escape_string($connect, $_REQUEST['phoneNumber']);
 $email = mysqli_real_escape_string($connect, $_REQUEST['email']);
 $password = mysqli_real_escape_string($connect, $_REQUEST['pass_word']);
 
-$hash = password_hash($password, PASSWORD_DEFAULT, ['cost' => 12]);
+//$hash = password_hash($password, PASSWORD_DEFAULT, ['cost' => 12]);
+$hash = md5($password);
 
 //Execute the query
 $query ="INSERT INTO user(firstName, surname, lastName,idNumber,phoneNumber,email, pass_word)
